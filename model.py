@@ -25,16 +25,16 @@ def train_and_check_model():
 
     vgg19.trainable = False
 
-    model = Sequential()
-    model.add(vgg19)
-    model.add(Flatten())
-    model.add(Dense(256))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-    model.add(Dense(1))
-    model.add(Activation('sigmoid'))
-
-    model.summary()
+    #model = Sequential()
+    #model.add(vgg19)
+    #model.add(Flatten())
+    #model.add(Dense(256))
+    #model.add(Activation('relu'))
+    #model.add(Dropout(0.5))
+    #model.add(Dense(1))
+    #model.add(Activation('sigmoid'))
+        
+    model = load_model('audio_model.h5')
 
     model.compile(loss='binary_crossentropy',
                   optimizer='adam',
