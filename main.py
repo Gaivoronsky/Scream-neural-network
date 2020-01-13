@@ -20,6 +20,8 @@ def train():
     recording(name_audio_vote, time)
     cut_audio(name_audio_vote, time)
     wav_to_picture(name_audio_vote, dir_train_vote)
+    
+    train_and_check_model()
 
 
 def use_code():
